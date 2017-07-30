@@ -81,7 +81,7 @@ func (w *Worker) Register() {
 		}
 		select {
 		case <-w.stopSignal:
-			log.Printf("Worker - %s exist.", w.Name)
+			log.Printf("Worker - %s receive stopSignal.", w.Name)
 			return
 		case <-ticker.C:
 		}
